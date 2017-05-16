@@ -2,7 +2,7 @@ $(document).ready(function(){
   // global variables for game
   var wins = 0;
   var losses = 0;
-  var currentNumber = 0;
+  var currentNumber;
   var randomGameNumber = 0;
   var randomDiamond = 0;
   var randomRuby = 0; 
@@ -30,23 +30,69 @@ $(document).ready(function(){
     $('#current-number').html(currentNumber);
     $('#wins').html(wins);
     $('#losses').html(losses);
-  }
+    
+    currentNumber = 0;
+  };
   // function to check the score and reset game
   function scoreChecker(){
     
-    if(currentNumber)
+    // if current number is equal to the random game number, player wins!
+    if(currentNumber === randomGameNumber){
+      wins++;
+      alert('You Win!');
+      newGame();
+    }
+    // else if the current number is over the random game number, player loses!
+    else if(currentNumber > randomGameNumber){
+      losses++;
+      alert('You lose, sorry')
+      newGame();
+    }
   }
+  
   newGame();
   
+  // on click, add random diamond value to current number then run score checker function
   $('#diamond').on('click', function(){
     
     if(currentNumber < randomGameNumber){
       currentNumber += randomDiamond;
       $('#current-number').html(currentNumber);
+      scoreChecker();
     }
-    else{
-      
-    }
+    
   })
   
+  // on click, add random ruby value to current number then run score checker function
+  $('#ruby').on('click', function(){
+    
+    if(currentNumber < randomGameNumber){
+      currentNumber += randomRuby;
+      $('#current-number').html(currentNumber);
+      scoreChecker();
+    }
+    
+  })
+  
+  // on click, add random sapphire value to current number then run score checker function
+  $('#sapphire').on('click', function(){
+    
+    if(currentNumber < randomGameNumber){
+      currentNumber += randomSapphire;
+      $('#current-number').html(currentNumber);
+      scoreChecker();
+    }
+    
+  })
+  
+  // on click, add random emerald value to current number then run score checker function
+  $('#emerald').on('click', function(){
+    
+    if(currentNumber < randomGameNumber){
+      currentNumber += randomEmerald;
+      $('#current-number').html(currentNumber);
+      scoreChecker();
+    }
+    
+  })
 })
