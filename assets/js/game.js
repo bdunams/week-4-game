@@ -39,13 +39,13 @@ $(document).ready(function(){
     // if current number is equal to the random game number, player wins!
     if(currentNumber === randomGameNumber){
       wins++;
-      alert('You Win!');
+      $('#game-results').text('You Win!');
       newGame();
     }
     // else if the current number is over the random game number, player loses!
     else if(currentNumber > randomGameNumber){
       losses++;
-      alert('You lose, sorry')
+      $('#game-results').text('You Lose!');
       newGame();
     }
   }
@@ -58,6 +58,7 @@ $(document).ready(function(){
     if(currentNumber < randomGameNumber){
       currentNumber += randomDiamond;
       $('#current-number').html(currentNumber);
+      $('#game-results').text('');
       scoreChecker();
     }
     
@@ -69,6 +70,7 @@ $(document).ready(function(){
     if(currentNumber < randomGameNumber){
       currentNumber += randomRuby;
       $('#current-number').html(currentNumber);
+      $('#game-results').text('');
       scoreChecker();
     }
     
@@ -80,6 +82,7 @@ $(document).ready(function(){
     if(currentNumber < randomGameNumber){
       currentNumber += randomSapphire;
       $('#current-number').html(currentNumber);
+      $('#game-results').text('');
       scoreChecker();
     }
     
@@ -91,6 +94,7 @@ $(document).ready(function(){
     if(currentNumber < randomGameNumber){
       currentNumber += randomEmerald;
       $('#current-number').html(currentNumber);
+      $('#game-results').text('');
       scoreChecker();
     }
     

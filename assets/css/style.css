@@ -1,4 +1,12 @@
+.crystals{
+  background: #000;
+}
 .gem{
+  margin: 20px;
   width: 200px;
   height: auto;
+  //border: 1px solid grey;
+}
+.red-gem{
+  width: 110px;
 }

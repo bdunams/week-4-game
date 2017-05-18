@@ -10,32 +10,35 @@
   </head>
   <body>
     
-    <div class="jumbotron">
-      <h1 class="text-center">Crystal Collector</h1>
-      
-      <p class="text-center">Game Rules:</p>
-      <h3 id="game-number" class="text-center"></h3>
-    </div>
-    
-    <div class="container text-center">
-      <img class="gem" id="diamond" src="assets/images/diamond.jpg">
-      <img class="gem" id="ruby" src="assets/images/ruby.jpg">
-      <img class="gem" id="sapphire" src="assets/images/sapphire.jpg">
-      <img class="gem" id="emerald" src="assets/images/emerald.jpg">
-    </div>
-    
-    <div id="game" class="container">
-      <br>
-      <div>Total Number:&nbsp;<span id="current-number"></span></div>
-      <br>
-      <div>Wins:&nbsp;<span id="wins"></span></div>
-      <br>
-      <div>Losses:&nbsp;<span id="losses"></span></div>
-      
-      <h3 id="game-results" class="alert text-center"></h3>
-      
-      <div id="to-start" class="text-center"></div>
-      
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="text-center">Crystal Collector</h1>
+      </div>
+
+      <div>
+        <p class="text-center">Game Rules:</p>
+      </div>
+      <div>
+        <h3 id="game-number" class="text-center"></h3>
+      </div>
+
+      <div class="text-center crystals">
+        <img class="gem" id="diamond" src="assets/images/diamond.jpg">
+        <img class="gem red-gem" id="ruby" src="assets/images/ruby.jpg">
+        <img class="gem" id="sapphire" src="assets/images/sapphire.jpg">
+        <img class="gem" id="emerald" src="assets/images/emerald.jpg">
+      </div>
+
+      <div id="game" class="text-center">
+        <br>
+        <h3>Your total score is:&nbsp;<span id="current-number"></span></h3>
+        <h3 id="game-results" class="text-center"></h3>
+        <div>Wins:&nbsp;<span id="wins"></span></div>
+        <br>
+        <div>Losses:&nbsp;<span id="losses"></span></div>
+
+        
+      </div>
     </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
